@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="icon" href="Images/logo.png">
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+
+<body>
+
+    <div class="container-lg py-5">
+        <h1 class="title mb-5 fst-italic">Products Management System :-</h1>
+        <div class="w-75 mx-auto">
+            <div class="form-floating mb-3">
+                <input oninput="validateProductInput(this)" type="text" class="form-control" id="productName" placeholder="productName">
+                <div class="alert alert-danger p-1 mt-1 d-none">
+                   <small>Product Name should start with capital letter and more than 1 letters</small>
+                </div>
+                <label for="productName">Product Name</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input oninput="validateProductInput(this)" type="number" class="form-control" id="productPrice" placeholder="productPrice">
+                <div class="alert alert-danger p-1 mt-1 d-none">
+                    <small>Should put Product price</small>
+                </div>
+                <label for="productPrice">Product Price</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input oninput="validateProductInput(this)" list="categories" type="text" class="form-control" id="productCategory"
+                    placeholder="productcategory">
+                    <div class="alert alert-danger p-1 mt-1 d-none">
+                        <small>Product Category should be one of the Category List</small>
+                    </div>
+                <label for="productCategory">Product Category</label>
+            </div>
+            <datalist id="categories">
+                <option value="TV" />
+                <option value="Mobiles" />
+                <option value="Laptops" />
+                <option value="Screens" />
+            </datalist>
+            <div class="form-floating mb-3">
+                <textarea oninput="validateProductInput(this)" class="form-control" id="productDescription" placeholder="productDescription"></textarea>
+                <div class="alert alert-danger p-1 mt-1 d-none">
+                    <small>Should put Product Description</small>
+                </div>
+                <label for="productDescription">Product Description</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="file" class="form-control" id="productImage" placeholder="productImage">
+                <label for="productImage">Product Image</label>
+            </div>
+            <button disabled id="addBtn" onclick="addProduct()" class="btn btn-primary mt-4">Add Product</button>
+            <button id="updateBtn" onclick="updateProduct()" class="btn btn-success mt-4 d-none">Update Product</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="form-floating mb-3">
+            <input oninput="search(this.value)" type="text" class="form-control" id="searchProduct" placeholder="searchProduct">
+            <label for="searchProduct">Search ...</label>
+        </div>
+    </div>
+
+
+    <div class="container py-5">
+        <div class="row gy-3" id="myData">
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="Js/main.js"></script>
+
+</body>
+
+</html>

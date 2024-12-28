@@ -1,0 +1,16 @@
+body{
+    background-color: rgba(26, 26, 42, 0.953);
+}
+.title{
+   font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    background: linear-gradient(90deg, #7689c8, #efece5);
+    background-clip: text;
+    color: transparent;
+}
+.form-group label{
+    left: 20px;
+    color: #777;
+    transition: all 0.5s;
+}
+
